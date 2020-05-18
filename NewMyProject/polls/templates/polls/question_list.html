@@ -1,0 +1,11 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    {% if questions %}
+        {% for q in questions %}
+            <h1> Question : {{ q.question_text }}</h1>
+        {% endfor %}
+    {% else %}
+        <h3 style="color: red">No Question</h3>
+    {% endif %}
+{% endblock %}
